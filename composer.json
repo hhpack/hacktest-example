@@ -1,0 +1,31 @@
+{
+  "name": "holyshared/hacktest-example",
+  "type": "library",
+  "keywords": [ "hack", "hhvm", "test" ],
+  "description": "",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Noritaka Horio",
+      "email": "holy.shared.design@gmail.com"
+    }
+  ],
+  "require": {
+    "hhvm": ">=3.21.0",
+    "hhvm/hhvm-autoload": "^1.5"
+  },
+  "require-dev": {
+    "hhvm/hacktest": "^1.1",
+    "facebook/fbexpect": "^2.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Example\\": "src"
+    }
+  },
+  "minimum-stability": "stable",
+  "scripts": {
+    "test": "vendor/bin/hacktest test",
+    "check:init": "touch .hhconfig"
+  }
+}
