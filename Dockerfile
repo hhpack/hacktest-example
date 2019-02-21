@@ -19,6 +19,4 @@ ADD test test
 ADD composer.json composer.json
 ADD hh_autoload.json hh_autoload.json
 ADD .hhconfig .hhconfig
-RUN mkdir ${HOME}/.composer && \
-  printf '{ "github-oauth": { "github.com": "%s" } }' $GITHUB_CREDENTIALS_TOKEN > ${HOME}/.composer/auth.json
 RUN composer install --no-interaction
