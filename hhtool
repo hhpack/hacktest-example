@@ -5,9 +5,12 @@
 #
 format() {
   echo "Start formatting the source code."
-  FILES=`find src test -name "*.hack"`
+  S_FILES=`find src test -name "*.hack"`
+  P_FILES=`find src test -name "*.hh"`
 
-  for FILE in $FILES
+  MERGED_FILES=(${S_FILES[*]} ${P_FILES[*]})
+
+  for FILE in ${MERGED_FILES[*]}
   do
     hackfmt $FILE -i
     echo $FILE
