@@ -8,7 +8,7 @@ final class Stack<T> {
     $this->items->add($value);
   }
 
-  public function count(): int {
+  public function count(): string {
     return $this->items->count();
   }
 }
